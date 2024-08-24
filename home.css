@@ -33,10 +33,6 @@ header {
     position: relative;
     height: 500px; /* Adjust height as needed */
     color: #826262;
-    background-image: url('WhatsApp Image 2024-08-23 at 19.53.46_91c87cf9.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .logo {
