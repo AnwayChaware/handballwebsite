@@ -79,7 +79,7 @@ nav ul li a:hover {
     line-height: 1.6;
     margin-bottom: 20px;
     color: #444;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 .about h2 {
