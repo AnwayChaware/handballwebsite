@@ -17,11 +17,13 @@
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #ff5722;
+            height: 100%;
         }
 
         .slideshow-container {
             position: relative;
-            max-width: 800px;
+            max-width: 1000px;
+            height: 600px;
             margin: 0 auto;
             border: 2px solid #ddd;
             border-radius: 10px;
@@ -32,6 +34,7 @@
         .mySlides {
             display: none;
             width: 100%;
+            height:100%;
         }
 
         .slide-img {
@@ -53,6 +56,10 @@
             border-radius: 0 3px 3px 0;
             user-select: none;
             background-color: rgba(0,0,0,0.5);
+        }
+
+        .prev {
+            left: 0;
         }
 
         .next {
@@ -163,6 +170,10 @@
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
+
+        setInterval(() => {
+            plusSlides(1);
+        }, 3000);
 
         function plusSlides(n) {
             showSlides(slideIndex += n);
