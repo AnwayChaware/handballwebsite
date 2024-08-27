@@ -1,76 +1,82 @@
-/* gallery.css */
-
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8; /* Light background color for the gallery page */
-    color: #333;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
+    background-image: url('.jpg'); /* Add the path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Keep the background image fixed while scrolling */
 }
 
-header {
-    background-color: #ff5722; /* Match the header color to the gallery section title color */
-    color: #fff;
-    padding: 20px 0;
+/* Container for the gallery */
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; /* Optional: rounded corners for the container */
 }
 
-header .container {
-    width: 80%;
-    margin: 0 auto;
+/* Title Styles */
+h1 {
+    color: #8a1313; /* Dark gray color for text */
+    margin-bottom: 30px;
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Folder Container Styles */
+.folders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #ff5722; /* Gallery page title color */
+/* Individual Folder Styles */
+.folder {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: #5f4278; /* Background color for folders */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-decoration: none; /* Remove underline from links */
+    color: #577b83; /* Dark gray color for text */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 10px;
-}
-
-.gallery-grid img {
+.folder img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
+    border-bottom: 3px solid #007bff; /* Blue border at the bottom */
 }
 
-.gallery-grid img:hover {
-    opacity: 0.8;
+.folder p {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-footer {
-    background-color: #ff5722; /* Match footer color to header color */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+/* Hover Effects for Folders */
+.folder:hover {
+    transform: scale(1.05); /* Slightly enlarge the folder on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.folder:hover p {
+    color: #007bff; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .folders {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .folder {
+        width: 80%;
+        height: auto;
+    }
 }

@@ -64,21 +64,21 @@ nav ul li a:hover {
 }
 
 .contact-details h1 {
-    font-size: 3em;
+    font-size: 1.5em;
     margin-bottom: 30px;
     color: #ff6f61;
     text-shadow: 2px 2px #fff;
 }
 
 .contact-details h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 20px;
     color: #c70039;
 }
 
 .contact-details p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1;
     margin-bottom: 20px;
     color: #555;
 }
