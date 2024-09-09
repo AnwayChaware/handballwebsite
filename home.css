@@ -134,9 +134,11 @@ nav ul img {
 
 /* Gallery Section */
 .gallery {
-    background-color: #fff;
+    background-color: #f5f5f5; /* Light grey background */
     padding: 40px 20px;
     text-align: center;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 .gallery h2 {
