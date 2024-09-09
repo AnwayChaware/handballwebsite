@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handball Club - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Include additional styles for the gallery */
+        .gallery {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        .gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dots {
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Counter styles */
+        .counter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .counter {
+            font-size: 2.5em;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .counter-description {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .about-section {
+    background: linear-gradient(white, #003366);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .stat-item {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul style="display: flex; justify-content: center;">
+                <img src="WhatsApp Image 2024-08-22 at 19.53.19_3bebc921.jpg" style="width:70px; height:70px; border-radius: 70px;">
+                <li><a style="font-size: x-large;" href="aboutus.html">About Us</a></li>
+                <li><a style="font-size: x-large;" href="news.html">News</a></li>
+                <li><a style="font-size: x-large;" href="vision.html">Vision</a></li>
+                <li><a style="font-size: x-large;" href="achivements.html">Achievements</a></li>
+                <li><a style="font-size: x-large;" href="contact.html">Contact</a></li>
+                <li><a style="font-size: x-large;" href="application.html">Application</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container1">
+            <p>Shree Sant Gajanan Maharaj Education, Sports and Health Multipurpose Institution Karanja (Lad) Washim Regt.
+                MAHARASHTRA 383/2013 F 7817 WASHIM DIRECTED BY</p>
+            <h2>Welcome to</h2>
+            <h1 class="glow"> SHREE SANT GAJANANA MAHARAJA HANDBALL CLUB </h1>
+        </div>
+    </section>
+
+    <div style="display: flex; justify-content: center;">
+        <h1>Your journey to handball greatness starts here!</h1>
+    </div>
+
+    <!-- New Section for HFI Information and Counter -->
+
+    <div class="about-section">
+        <h1 class="about-header">ABOUT HANDBALL FEDERATION OF INDIA</h1>
+        <p class="about-description">
+          The Handball Federation of India (HFI) is the administrative and controlling body for handball,
+          beach handball, and wheelchair handball in the Republic of India. Founded in 1971, HFI is affiliated with the Indian Olympic Association (IOA). HFI is also recognized by the Ministry of Youth Affairs and Sports, Government of India.
+        </p>
+        <div class="statistics">
+          <div>
+            <div class="stat-item" id="member-units">0</div>
+            <div class="stat-label">Member Units</div>
+          </div>
+          <div>
+            <div class="stat-item" id="registered-players">0</div>
+            <div class="stat-label">Registered Players</div>
+          </div>
+          <div>
+            <div class="stat-item" id="registered-officials">0</div>
+            <div class="stat-label">Registered Officials</div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function animateCounter(id, start, end, duration) {
+          const element = document.getElementById(id);
+          let startTime = null;
+      
+          function updateCounter(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            element.textContent = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+      
+          requestAnimationFrame(updateCounter);
+        }
+      
+        animateCounter("member-units", 0, 37, 2000);
+        animateCounter("registered-players", 0, 3525, 2000);
+        animateCounter("registered-officials", 0, 216, 2000);
+      </script>
+    
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <a href="gallery.html">
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <a href="gallery.html"></a>
+                    <img src="slide1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <a href="gallery.html"></a>
+                    <img src="slide2.jpg" style="width:100%">
+                </div>
+
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <h2>Join Our Club</h2>
+                <p>Become a part of our vibrant community of handball enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2024 Shree Sant Gajanan Maharaja Handball Club. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        // Dynamic Counter functionality
+        let counterValue = 0;
+        const counterElement = document.getElementById("dynamicCounter");
+
+        setInterval(function () {
+            counterValue += 1;
+            counterElement.textContent = counterValue;
+        }, 1000); // Increase counter by 1 every second
+    </script>
+</body>
+
+</html>

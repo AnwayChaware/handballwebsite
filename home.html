@@ -151,13 +151,65 @@
         .dot:hover {
             background-color: #717171;
         }
+
+        /* Counter styles */
+        .counter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .counter {
+            font-size: 2.5em;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .counter-description {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .about-section {
+    background: linear-gradient(rgb(75, 122, 84), #003366);
+    color:black;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .about-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-description {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .stat-item {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    line-height: normal;
+  }
+
     </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
+            <ul style="display: flex; justify-content: center;">
+                <img src="WhatsApp Image 2024-08-22 at 19.53.19_3bebc921.jpg" style="width:70px; height:70px; border-radius: 70px;">
                 <li><a style="font-size: x-large;" href="aboutus.html">About Us</a></li>
                 <li><a style="font-size: x-large;" href="news.html">News</a></li>
                 <li><a style="font-size: x-large;" href="vision.html">Vision</a></li>
@@ -166,50 +218,89 @@
                 <li><a style="font-size: x-large;" href="application.html">Application</a></li>
             </ul>
         </nav>
-        <div class="container">
-            <img src="./photo.jpg" style="height:250px;width:250px;" class="logo">
-            <img src="./handballlogo.jpg" style="height:250px;width:250px;" class="logo">
-            <img src="./WhatsApp Image 2024-08-22 at 19.53.19_3bebc921.jpg" style="height:250px;width:250px;" class="logo">
-        </div>
     </header>
 
     <section class="hero">
         <div class="container1">
             <p>Shree Sant Gajanan Maharaj Education, Sports and Health Multipurpose Institution Karanja (Lad) Washim Regt.
                 MAHARASHTRA 383/2013 F 7817 WASHIM DIRECTED BY</p>
-            <h2>Welcome to</h2>
-            <h1>SHREE SANT GAJANANA MAHARAJA HANDBALL CLUB</h1>
+            
+                <h2>Welcome to</h2>
+            
+                <h1 class="glow"> SHREE SANT GAJANANA MAHARAJA HANDBALL CLUB </h1>
         </div>
     </section>
 
-    <div style="display: flex; justify-content: center;">
-        <h1>Your journey to handball greatness starts here!</h1>
+    <!-- New Section for HFI Information and Counter -->
+
+    <div class="about-section">
+        <h1 class="about-header">ABOUT</h1>
+        <p class="about-description">
+          The Handball Federation of India (HFI) is the administrative and controlling body for handball,
+          beach handball, and wheelchair handball in the Republic of India. Founded in 1971, HFI is affiliated with the Indian Olympic Association (IOA). HFI is also recognized by the Ministry of Youth Affairs and Sports, Government of India.
+        </p>
     </div>
+    <div class="statistics">
+          <div>
+            <div class="stat-item" id="member-units">0</div>
+            <div class="stat-label">Member Units</div>
+          </div>
+          <div>
+            <div class="stat-item" id="registered-players">0</div>
+            <div class="stat-label">Registered Players</div>
+          </div>
+          <div>
+            <div class="stat-item" id="registered-officials">0</div>
+            <div class="stat-label">Registered Officials</div>
+          </div>
+     </div>
+      
+      <script>
+        function animateCounter(id, start, end, duration) {
+          const element = document.getElementById(id);
+          let startTime = null;
+      
+          function updateCounter(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            element.textContent = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+      
+          requestAnimationFrame(updateCounter);
+        }
+      
+        animateCounter("member-units", 0, 37, 2000);
+        animateCounter("registered-players", 0, 3525, 2000);
+        animateCounter("registered-officials", 0, 216, 2000);
+      </script>
+    
 
     <!-- Gallery Section -->
     <section class="gallery">
-        <a href ="gallery.html">
-        <h2>Gallery</h2>
-        <div class="slideshow-container">
+        <a href="gallery.html">
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
 
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <a href="gallery.html"></a>
-                <img src="slide1.jpg" style="width:100%">
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <a href="gallery.html"></a>
+                    <img src="slide1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <a href="gallery.html"></a>
+                    <img src="slide2.jpg" style="width:100%">
+                </div>
+
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <a href="gallery.html"></a>
-                <img src="slide2.jpg" style="width:100%">
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
-
-
-        </div>
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
     </section>
 
     <section class="features">
@@ -222,13 +313,11 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Shree Sant Gajanan Maharaja Handball Club. All Rights Reserved.</p>
-            <p>Designed by Anway Chaware</p>
-        </div>
+        <div>&copy; 2024 Shree Sant Gajanan Maharaja Handball Club. All Rights Reserved.</div>
     </footer>
 
     <script>
+        // Slideshow functionality
         let slideIndex = 0;
         showSlides();
 
@@ -246,8 +335,17 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 5000); // Change image every 2 seconds
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
+
+        // Dynamic Counter functionality
+        let counterValue = 0;
+        const counterElement = document.getElementById("dynamicCounter");
+
+        setInterval(function () {
+            counterValue += 1;
+            counterElement.textContent = counterValue;
+        }, 1000); // Increase counter by 1 every second
     </script>
 </body>
 

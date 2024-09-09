@@ -97,6 +97,7 @@ nav ul li a:hover {
     font-size: 1.5em;
     margin-bottom: 15px;
     color: #333;
+    text-align: left;
 }
 
 .about ul li strong {
