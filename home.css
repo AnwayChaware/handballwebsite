@@ -59,7 +59,7 @@ nav ul img {
     /* Styling for the club name and information */
     .container1 p {
         font-size: 1.2em; /* Make the information text smaller */
-        color: #333; /* Darker color for contrast */
+        color: white; /* Darker color for contrast */
         margin: 0;
         font-family: Arial, sans-serif;
     }
@@ -67,14 +67,14 @@ nav ul img {
     .container1 h1 {
         font-size: 3.5em; /* Make the club name bigger */
         font-weight: bold;
-        color: #ff5722; /* Accent color for club name */
+        color:white; /* Accent color for club name */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a glow effect */
         font-family: 'Trebuchet MS', sans-serif; /* Different font for the club name */
     }
 
     .container1 h2 {
         font-size: 1.8em; /* Smaller size for the 'Welcome to' heading */
-        color: #666; /* A more neutral color */
+        color: white; /* A more neutral color */
         margin-bottom: 10px;
         font-family: 'Verdana', sans-serif;
     }
