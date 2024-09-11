@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurangabad - Gallery</title>
+    <title>Birthday Celebration - Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
     <style>
         /* General Body Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #7081aa; /* Light gray background */
+            background-image: url('path/to/your/diwali-background.jpg'); /* Add the path to your Diwali background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-attachment: fixed; /* Keep the background image fixed while scrolling */
         }
 
         /* Container for the gallery */
         .gallery-container {
             text-align: center;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+            border-radius: 15px; /* Rounded corners for the container */
         }
 
         /* Title Styles */
@@ -68,8 +75,7 @@
         }
 
         .lightbox img, .lightbox video {
-            max-width: 100%;
-            max-height: 100%;
+            width: -webkit-fill-available;
             border-radius: 10px; /* Optional: rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow around the enlarged content */
         }
@@ -119,25 +125,6 @@
             margin: 5px 0;
             font-size: 1em;
         }
-
-        .glow {
-    font-size: 2em;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px #333;
-        color: #905a88;
-        text-align: center;
-        animation: glow 1s ease-in-out infinite alternate;
-}
-      
-@-webkit-keyframes glow {
-        from {
-          text-shadow: 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #37187a, 0 0 40px #431c98, 0 0 50px #431c98, 0 0 60px #431c98, 0 0 70px #431c98;
-        }
-        
-        to {
-          text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-        }
-    }
     </style>
 </head>
 <body>
@@ -148,13 +135,29 @@
     </header>
 
     <div class="gallery-container">
-        <h1>49TH SENIOR WOMEN STATE HANBALL CHAMPIONSHIP 2023-2024 AURANGABAD</h1>
+        <h1>Birthday Celebration Gallery</h1>
         <div class="image-gallery">
             <!-- Example images and videos; adjust src paths to match your files -->
-            <img src="tournament/aurangabad/1.jpg" onclick="openLightbox('tournament/aurangabad/1.jpg')">
-            <img src="tournament/aurangabad/2.jpg" onclick="openLightbox('tournament/aurangabad/2.jpg')">
-            <img src="tournament/aurangabad/3.jpg" onclick="openLightbox('tournament/aurangabad/3.jpg')">
-            <img src="tournament/aurangabad/4.jpg" onclick="openLightbox('tournament/aurangabad/4.mp4')">
+            <img src="birthday celebration/1.jpg" onclick="openLightbox('birthday celebration/1.jpg')">
+            <img src="birthday celebration/2.jpg" onclick="openLightbox('birthday celebration/2.jpg')">
+            <img src="birthday celebration/3.jpg" onclick="openLightbox('birthday celebration/3.jpg')">
+            <img src="birthday celebration/4.jpg" onclick="openLightbox('birthday celebration/4.jpg')">
+            <img src="birthday celebration/5.jpg" onclick="openLightbox('birthday celebration/5.jpg')">
+            <img src="birthday celebration/6.jpg" onclick="openLightbox('birthday celebration/6.jpg')">
+            <img src="birthday celebration/7.jpg" onclick="openLightbox('birthday celebration/7.jpg')">
+            <img src="birthday celebration/8.jpg" onclick="openLightbox('birthday celebration/8.jpg')">
+            <img src="birthday celebration/9.jpg" onclick="openLightbox('birthday celebration/9.jpg')">
+            <img src="birthday celebration/10.jpg" onclick="openLightbox('birthday celebration/10.jpg')">
+            <img src="birthday celebration/11.jpg" onclick="openLightbox('birthday celebration/11.jpg')">
+            <img src="birthday celebration/12.jpg" onclick="openLightbox('birthday celebration/12.jpg')">
+            <img src="birthday celebration/13.jpg" onclick="openLightbox('birthday celebration/13.jpg')">
+            <img src="birthday celebration/14.jpg" onclick="openLightbox('birthday celebration/14.jpg')">
+            <img src="birthday celebration/15.jpg" onclick="openLightbox('birthday celebration/15.jpg')">
+            <img src="birthday celebration/16.jpg" onclick="openLightbox('birthday celebration/16.jpg')">
+            <img src="birthday celebration/17.jpg" onclick="openLightbox('birthday celebration/17.jpg')">
+            <img src="birthday celebration/18.jpg" onclick="openLightbox('birthday celebration/18.jpg')">
+            <img src="birthday celebration/19.jpg" onclick="openLightbox('birthday celebration/19.jpg')">
+
             <!-- Add more images/videos as needed -->
         </div>
     </div>
@@ -179,29 +182,35 @@
     <script>
         let currentIndex = 0;
         const media = [
-            'tournament/aurangabad/1.jpg',
-            'tournament/aurangabad/2.jpg',
-            'tournament/aurangabad/3.jpg',
-            'tournament/aurangabad/4.mp4',
+            'birthday celebration/1.jpg',
+            'birthday celebration/2.jpg',
+            'birthday celebration/3.jpg',
+            'birthday celebration/4.jpg',
+            'birthday celebration/5.jpg',
+            'birthday celebration/6.jpg',
+            'birthday celebration/7.jpg',
+            'birthday celebration/8.jpg',
+            'birthday celebration/9.jpg',
+            'birthday celebration/10.jpg',
+            'birthday celebration/11.jpg',
+            'birthday celebration/12.jpg',
+            'birthday celebration/13.jpg',
+            'birthday celebration/14.jpg',
+            'birthday celebration/15.jpg',
+            'birthday celebration/16.jpg',
+            'birthday celebration/17.jpg',
+            'birthday celebration/18.jpg',
+            'birthday celebration/19.jpg'
         ];
 
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxVideo = document.getElementById('lightbox-video');
-
-            // Pause all background videos
-            document.querySelectorAll('video').forEach(video => {
-                if (video.src !== src) {
-                    video.pause();
-                }
-            });
-
             if (src.endsWith('.mp4')) {
                 lightboxVideo.src = src;
                 lightboxVideo.style.display = 'block';
                 lightboxImg.style.display = 'none';
-                lightboxVideo.play(); // Play the video in lightbox
             } else {
                 lightboxImg.src = src;
                 lightboxImg.style.display = 'block';

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wardha - Gallery</title>
+    <title>Aurangabad - Gallery</title>
     <style>
         /* General Body Styles */
         body {
@@ -119,7 +119,6 @@
             margin: 5px 0;
             font-size: 1em;
         }
-       
     </style>
 </head>
 <body>
@@ -130,11 +129,13 @@
     </header>
 
     <div class="gallery-container">
-        <h1>43th JUNIOR MENS STATE HANDBALL CHAMPIONSHIP 2024-2025 WARDHA</h1>
+        <h1>49TH SENIOR WOMEN STATE HANDBALL CHAMPIONSHIP 2023-2024 SAMBHAJINAGAR</h1>
         <div class="image-gallery">
             <!-- Example images and videos; adjust src paths to match your files -->
-            <img src="tournament/Wardha/1.jpg" onclick="openLightbox('tournament/Wardha/1.jpg')">
-            <img src="tournament/Wardha/2.jpg" onclick="openLightbox('tournament/Wardha/2.jpg')">
+            <img src="tournament/Sambhajinagar/1.jpg" onclick="openLightbox('tournament/Sambhajinagar/1.jpg')">
+            <img src="tournament/Sambhajinagar/2.jpg" onclick="openLightbox('tournament/Sambhajinagar/2.jpg')">
+            <img src="tournament/Sambhajinagar/3.jpg" onclick="openLightbox('tournament/Sambhajinagar/3.jpg')">
+            <video src="tournament/Sambhajinagar/4.mp4" onclick="openLightbox('tournament/Sambhajinagar/4.mp4')" controls></video>
             <!-- Add more images/videos as needed -->
         </div>
     </div>
@@ -159,9 +160,11 @@
     <script>
         let currentIndex = 0;
         const media = [
-            'tournament/Wardha/1.jpg',
-            'tournament/Wardha/2.jpg',
-    ]
+            'tournament/Sambhajinagar/1.jpg',
+            'tournament/Sambhajinagar/2.jpg',
+            'tournament/Sambhajinagar/3.jpg',
+            'tournament/Sambhajinagar/4.mp4',
+        ];
 
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
@@ -169,11 +172,8 @@
             const lightboxVideo = document.getElementById('lightbox-video');
 
             // Pause all background videos
-            document.querySelectorAll('video').forEach(video => {
-                if (video.src !== src) {
-                    video.pause();
-                }
-            });
+            const allVideos = document.querySelectorAll('video');
+            allVideos.forEach(video => video.pause());
 
             if (src.endsWith('.mp4')) {
                 lightboxVideo.src = src;

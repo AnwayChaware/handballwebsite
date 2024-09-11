@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Handball Matches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .live-container {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .live-video {
+            width: 80%;
+            height: 500px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="live-notification">
+        Live Match is On! <a href="#live-video" style="color: white; font-weight: bold; text-decoration: underline;">Watch Now!</a>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <h1>Shree Sant Gajanan Maharaja Handball Club</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="vision.html">Vision</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="application.css">Application</a></li>
+            
+
+        </ul>
+    </nav>
+
+    <!-- Live Match Section -->
+    <div class="live-container">
+        <h2>Live Handball Match</h2>
+
+        <!-- Embed YouTube Live Stream or other platform video -->
+        <iframe class="live-video" 
+            src="https://www.youtube.com/embed/live_stream?channel=[YOUR_CHANNEL_ID]" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <!-- Replace with your actual YouTube, Twitch or other live stream URL -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shree Sant Gajanan Maharaja Handball Club. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
