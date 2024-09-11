@@ -190,6 +190,7 @@
                     <li><a href="vision.html">Vision</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="application.html">Application</a></li>
+                    <li><a href="live-matches.html">Live Matches</a></li>
                 </ul>
             </nav>
         </div>
@@ -323,7 +324,7 @@
                 </div>
 
                 <!-- Player 4 -->
-                <div class="player-card" onclick="showPlayerDetails('IMG_20240824_171840.jpg', 'Ishwari Prakash Thakare', '▪ 37th Sub Junior Girls National Handball Championship, Saran, Bihar (14th Dec-18th Dec 2022')"
+                <div class="player-card" onclick="showPlayerDetails('IMG_20240824_171840.jpg', 'Ishwari Prakash Thakare', '▪ 37th Sub Junior Girls National Handball Championship, Saran, Bihar (14th Dec-18th Dec 2022)')"
                     role="button" aria-label="View details for Ishwari Prakash Thakare">
                     <img src="IMG_20240824_171840.jpg">
                     <h2>Ishwari Prakash Thakare</h2>
@@ -494,21 +495,11 @@
     </script>
     <script>
         // Function to play the sound
-        function playSound() {
-            const audio = new Audio('audio/click_sound.mp3'); // Path to your audio file
-            audio.play();
-        }
 
         // Function to toggle player details
         function toggleSection(sectionId) {
             const section = document.getElementById(sectionId);
             section.style.display = section.style.display === 'none' ? 'block' : 'none';
-        }
-
-        // Function to show player details in a modal or overlay
-        function showPlayerDetails(imageSrc, playerName, playerDetails) {
-            // Your existing function to display player details
-            playSound();  // Play sound when showing player details
         }
     </script>
 </body>
